@@ -300,7 +300,7 @@ def login():
     if request.method == "POST":
         username = request.form["username"]
         password = request.form["password"]
-        next_page = request.form("next_page")
+        next_page = request.form["next_page"]
         user_id = users.check_login(username, password)
         if user_id:
             session["user_id"] = user_id
